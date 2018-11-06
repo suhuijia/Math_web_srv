@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EEE;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+#header {
+    margin: 1em 0;
+
+}
+
+#sections {
+    padding: 0 1em;
+}
+
+#sections ul, #sections ol {
+    margin-left: 2em;
+}
+
+#sections p {
+    margin-bottom: 0.5em;
+}
+
+.section {
+    margin-bottom: 1em;
+}
+
+#menu-nav li {
+    display: inline;
+    margin: 0 0.5em;
+}
+
+#main-wrapper {
+    margin: 1em 0; /*输入框与标题的距离*/
+    background-color: #FFF;
+    /*border-top: 1px dashed #DDD;*/
+    /*border-bottom: 1px dashed #DDD;*/
+    text-align: left;
+    z-index: 999;
+}
+
+/*#main { width:800px; margin:auto; }*/
+.app {
+    margin: 0.5em auto;
+}
+
+.eq {
+    min-height: 50px;
+}
+
+#loading {
+    height: 70px;
+    text-align: center;
+}
+
+#loading img {
+    margin-top: 45px;
+}
+
+.result {
+    font-size: 200%;
+}
+
+.result_gt {
+    font-size: 200%;
+}
+
+#query {
+    font-size: 50%;
+    padding: 0.5em;
+}
+
+/* 50% of parent container (.result), so it should render as normal size. */
+
+.draw {
+    margin-top: 2px;
+    /*width: 50px;*/
+    /*margin: auto;*/
+    margin-bottom: 1em;
+}
+
+#drawhere {
+    position: relative;
+    top: -50px;
+    z-index: 1;
+    float: right;
+}
+
+#drawing-canvas {
+    position: relative;
+    /*margin-left:-1em;*/
+    margin: auto;
+    /*width: 200px;*/
+    z-index: 1001;
+    border: 2px solid #dadada;
+}
+
+/*#publications li { font-size:85%; }*/
+.controls {
+    overflow: auto;
+    position: relative;
+    /*margin-right:10px;*/
+    /*position:absolute;*/
+    /*right:1px;*/
+    /*width:800px;*/
+    z-index: 999;
+}
+
+.controls * {
+    vertical-align: middle;
+    /*position: relative;*/
+    z-index: 999;
+
+}
+
+.controls a {
+    height: 20px;
+    font-family: Monaco;
+    font-weight: bold;
+    font-size: 1em;
+    padding-left: 30px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+a#clear {
+    background: url(cross.png) no-repeat scroll 2px 1px #FFFFFF;
+    color: red;
+}
+
+a#send {
+    background: url(submit.png) no-repeat scroll 2px 1px #FFFFFF;
+    color: green;
+}
+
+a#undo {
+    background: url(previous.png) no-repeat scroll 2px 1px #FFFFFF;
+    color: blue;
+}
+
+a#redo {
+    background: url(next.png) no-repeat scroll 2px 1px #FFFFFF;
+    color: blue;
+}
+
+#footer {
+    background-color: #FFF;
+    border-top: 1px dashed #DDD;
+    padding: 2em;
+    font-family: sans-serif;
+    font-size: 80%;
+    z-index: -1;
+}
+
+.fl {
+    float: left;
+    font-size: 12cm;
+}
+
+.fr {
+    float: right;
+}
+
+.inline {
+    display: inline;
+}
+
+#trainer {
+    margin: 0.5em 0;
+}
+
+.f-copyright {
+    font-family: Microsoft YaHei;
+    display: block;
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    z-index: -1
+}
+
+.img {
+    /*max-width: 100%;*/
+    /*max-height: 100%;*/
+    width: 100px;
+    height: 100px;
+}
+
+.title{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(254, 255, 249);
+    /*text-align: center;*/
+}
+.subtitle{
+    color: rgb(254, 255, 249);
+}
+
+#title{
+    background-color: rgb(87, 83, 84);
+    -moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+    box-shadow: 0px 3px 2px #888888;
+    z-index: -1;
+}
+
+.head {
+    font-family: Microsoft YaHei;
+    align-content: center;
+    margin: 1em 0;
+    margin-left: 2em;
+}
+
+
+.overlay{
+    /*background:transparent url(images/overlay.png) repeat top left;*/
+    position:fixed;
+    /*opacity: 0.5;*/
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:1000;
+}
+
+.box{
+    position:fixed;
+    top:-500px;
+    left:30%;
+    right:30%;
+    background-color: rgb(236, 232, 233);
+    padding:30px;
+    opacity: 1.0;
+    /*border:2px solid #ffffff;*/
+    /*-moz-border-radius: 20px;*/
+    /*-webkit-border-radius:20px;*/
+    /*-khtml-border-radius:20px;*/
+    -moz-box-shadow: 0 2px 5px #333;
+    -webkit-box-shadow: 0 2px 5px #333;
+    z-index:1000;
+    font-family: Microsoft YaHei;
+}
+
+span.boxclose{
+    float:right;
+    width:26px;
+    height:26px;
+    background:transparent url(images/cancel.png) repeat top left;
+    margin-top:-30px;
+    margin-right:-30px;
+    cursor:pointer;
+}
+
+.tip_msg{
+    font-family: Microsoft YaHei;
+    color: #dd6423;
+    text-align: center;
+    margin-top: 1em;
+    /*font-size: 1em;*/
+}
+
+#bbox{
+    /*border: 2px dashed rgba(23, 193, 196, 0.99);*/
+}
